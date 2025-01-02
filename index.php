@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/config/Connection.php';
+require __DIR__ . '/config/conn.php';
 require __DIR__ . '/includes/header.php';
 ?> 
 
