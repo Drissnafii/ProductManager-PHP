@@ -64,10 +64,13 @@ require __DIR__ . '/config/conn.php';
                 <!-- Options -->
                 <div class="options">
                     <label class="checkbox-wrapper">
-                        <input type="checkbox">
-                        <span>Remember me</span>
+                        <!-- <input type="checkbox">
+                        <span>Remember me</span> --> <!-- Maybe I will need to implement that later... -->
                     </label>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <div class="text-center">
+
+                      <a href="#" class="forgot-password ">Forgot password?</a>
+                    </div>
                 </div>
 
                 <!-- Submit Button -->
