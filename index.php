@@ -2,6 +2,7 @@
 require __DIR__ . '/config/conn.php';
 require __DIR__ . '/includes/header.php';
 ?> 
+<link rel="stylesheet" href="./assets/css/style.css">
 
 <div class="w3-container w3-black w3-center w3-allerta">
 
