@@ -34,25 +34,3 @@ function myFunction() {
       toggleIcon.classList.add('fa-eye');
   }
   })
-          function togglePassword() {
-            const password = document.getElementById('password');
-            const toggleIcon = document.getElementById('toggleIcon');
-            
-            if (password.type === 'password') {
-                password.type = 'text';
-                toggleIcon.classList.remove('fa-eye');
-                toggleIcon.classList.add('fa-eye-slash');
-            } else {
-                password.type = 'password';
-                toggleIcon.classList.remove('fa-eye-slash');
-                toggleIcon.classList.add('fa-eye');
-            }
-          
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            console.log('Login attempt:', { email, password });
-        }
