@@ -3,14 +3,14 @@ require __DIR__ . '/config/conn.php';
 require __DIR__ . '/includes/header.php';
 ?> 
 
-<div class="ContainerAll">
+<div class="w3-container w3-black w3-center w3-allerta">
 
 <div class="w3-center">
 
 
-<h1>Contact Form</h1>
+<h1 class="w3-cursive">Login Form</h1>
 
-<form action="send.php" method="POST"> 
+<form action="send.php" method="POST" class="w3-cursive"> 
 
 	<label for="firstname">First Name:</label><br>
 	<input type="text" id="firstname" name="firstname" require><br><br>
@@ -24,15 +24,15 @@ require __DIR__ . '/includes/header.php';
 	<label for="pass">Password:</label><br>
 	<input type="password" id="pass" name="pass" require><br><br>
 
-	<input type="submit" name="submit" value="Submit" onclick="showAlert()">
+	<input class="w3-panel w3-round-xlarge w3-teal" type="submit" name="submit" value="Submit" onclick="showAlert()">
 </form>
 </div>
 
 <div class="w3-container" id="searching">
 
-  <button onclick="filtering()">
+  <!-- <button onclick="filtering()">
     <h2 id="search-button">Filter Table</h2>
-  </button>
+  </button> -->
 
     <div id="myDiv">
 
@@ -87,36 +87,12 @@ require __DIR__ . '/includes/header.php';
 
 </div>
 
-<!-- <script>
-	function myFunction() {
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
-  }
-</script> -->
-
 
 <?php
-include 'read.php';
 include __DIR__ . '/includes/footer.php';
 ?> 
 </div>
 
-
-<!-- <script src="./assets/JS/script.js"></script> -->
 <script src="assets/JS/script.js"></script>
 </body>
 </html>

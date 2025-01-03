@@ -53,8 +53,8 @@ try {
 
     foreach($sqlQueries as $query){
         $conn->exec($query);
-        echo "Query executed successfully<br/>";
     }
+    echo "Queries are executed successfully<br/>";
 
     $conn = null;
 } catch (PDOException $e) {
