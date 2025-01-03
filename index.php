@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/config/conn.php';
+require __DIR__ . '/Models/config/dbcreator.php';
 // require __DIR__ . '/includes/header.php';
 ?> 
 
@@ -9,7 +9,7 @@ require __DIR__ . '/config/conn.php';
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Login | Your App</title>
-      <link rel="stylesheet" href="./assets/css/style.css">
+      <link rel="stylesheet" href="./View/assets/css/style.css">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
@@ -96,6 +96,6 @@ require __DIR__ . '/config/conn.php';
 ?> 
 
 
-<script src="assets/JS/script.js"></script>
+<script src="View/assets/JS/script.js"></script>
 </body>
 </html>
