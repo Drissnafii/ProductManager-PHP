@@ -1,34 +1,54 @@
 <?php
 require __DIR__ . '/Models/config/dbcreator.php';
-// require __DIR__ . '/includes/header.php';
+include __DIR__ . '/View/includes/header.php';
 ?> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Interface</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="./View/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Login | Your App</title>
-      <link rel="stylesheet" href="./View/assets/css/style.css">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<!-- Try includding taildwing.css  -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {
+       fontFamily:{
+        'outfit' : ['Outfit', 'sans-serif'],
+          'poppins': ['Poppins', 'sans-serif'],
+        }
+    },
+  },
+  plugins: [],
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <div class="container">
-        <div class="card">
+
+    <div class="w-full max-w-md mx-auto">
+        <div class="bg-[#F2F0E9] rounded-xl shadow-md p-8 border border-gray-200 max-w-xl">
             <!-- Header -->
-            <div class="header">
-                <div class="logo">
-                    <i class="fas fa-user-circle"></i>
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-[#CDC1FF] rounded-full inline-flex items-center justify-center mb-4">
+                    <i class="fas fa-user-circle text-7xl" ></i>
                 </div>
-                <h1>Welcome Back</h1>
-                <p class="subtitle">Sign in to continue your journey</p>
+                <h1 class="text-gray-800 text-xl mb-2">Welcome Back</h1>
+                <p class="text-gray-600 text-sm">Sign in to continue your journey</p>
             </div>
 
             <!-- Form -->
             <form>
                 <!-- Email Field -->
-                <div class="form-group">
+                <div class="relative mb-6">
                     <input 
                         type="email" 
                         id="email" 
@@ -41,7 +61,7 @@ require __DIR__ . '/Models/config/dbcreator.php';
                 </div>
 
                 <!-- Password Field -->
-                <div class="form-group">
+                <div class="relative mb-6">
                     <input 
                         type="password" 
                         id="password" 
@@ -62,38 +82,68 @@ require __DIR__ . '/Models/config/dbcreator.php';
                 </div>
 
                 <!-- Options -->
-                <div class="options">
-                    <label class="checkbox-wrapper">
-                        <!-- <input type="checkbox">
-                        <span>Remember me</span> --> <!-- Maybe I will need to implement that later... -->
-                    </label>
+                <div class="flex justify-between items-center mb-6 text-sm">
                     <div class="text-center">
 
-                      <a href="#" class="forgot-password ">Forgot password?</a>
+                      <a href="#" class="text-[#A294F9] no-underline transition-colors duration-200 hover:text-[#8C7DF9]">Forgot password?</a>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="submit-btn">
-                    <span>Sign in</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+                <button type="submit" class="
+    w-full 
+    py-3 
+    relative
+    overflow-hidden
+    bg-[#A294F9]
+    text-[#F5EFFF] 
+    border 
+    border-transparent
+    rounded-full
+    font-semibold 
+    transition-all 
+    duration-300 
+    flex 
+    items-center 
+    justify-center 
+    gap-2 
+    active:bg-[#8C7DF9]
+    disabled:bg-[#E5D9F2]
+    disabled:text-[#A294F9]
+    disabled:cursor-not-allowed
+    hover:bg-[#0000]
+    hover:shadow-[#CDC1FF]/40
+    active:scale-84
+    before:absolute
+    before:inset-0
+    before:bg-[#8C7DF9]
+    before:transition-transform 
+    before:duration-500
+    before:transform 
+    before:scale-x-0 
+    before:origin-center
+    hover:before:scale-x-100
+    aria-disabled:true
+">
+    <span class="relative z-10">Login</span>
+     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 relative z-10" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+    </svg>
+</button>
             </form>
 
             <!-- Sign Up Link -->
-            <div class="signup-link">
+            <div class="text-center mt-6 text-sm text-gray-600">
                 <p>
-                    Don't have an account? 
-                    <a href="#">Create one now</a>
+                    Don't have an account?
+                    <a href="#" class="text-[#A294F9] no-underline font-medium transition-colors duration-200 hover:text-[#8C7DF9]">Create one now</a>
                 </p>
             </div>
         </div>
     </div>
-</body>
 </html>
-<?php
-// include __DIR__ . '/includes/footer.php'; 
-?> 
+
+ <!-- require __DIR__ . '/View/includes/footer.php';  -->
 
 
 <script src="View/assets/JS/script.js"></script>

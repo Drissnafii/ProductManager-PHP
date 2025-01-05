@@ -1,58 +1,15 @@
-/* Header  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #F5EFFF;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    font-family: 'Outfit', sans-serif;
 }
 
-.container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
-.card {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    border: 1px solid #E5D9F2;
-}
-
-.header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.logo {
-    width: 64px;
-    height: 64px;
-    background: #CDC1FF;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.logo i {
-    font-size: 1.5rem;
-    color: #A294F9;
-}
-
-h1 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+/* Or more specific elements if you want to use different fonts*/
+.my-special-text {
+ font-family: 'Poppins', sans-serif;
+ font-weight: 600;
 }
 
 .subtitle {
@@ -97,7 +54,8 @@ h1 {
 
 .form-control:focus ~ .floating-label,
 .form-control:not(:placeholder-shown) ~ .floating-label {
-    transform: translateY(-1.4rem) scale(0.85);
+    transform: translateY(-1.7rem) scale(0.85);
+    border-radius: 7px;
     color: #A294F9;
 }
 
@@ -115,103 +73,4 @@ h1 {
 
 .password-toggle:hover {
     color: #A294F9;
-}
-
-.options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 0.875rem;
-}
-
-.checkbox-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-input[type="checkbox"] {
-    accent-color: #A294F9;
-}
-
-.forgot-password {
-    color: #A294F9;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.forgot-password:hover {
-    color: #8C7DF9;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 1rem;
-    background: #A294F9;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #8C7DF9;
-}
-
-.signup-link {
-    text-align: center;
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
-    color: #666;
-}
-
-.signup-link a {
-    color: #A294F9;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.signup-link a:hover {
-    color: #8C7DF9;
-}
-/* Navigation  */
-nav {
-    margin-top: 0.5rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    font-size: 1rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    bottom: 0;
-    line-height: 50px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-#myDiv {
-    display: none;
 }
