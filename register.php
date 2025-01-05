@@ -1,22 +1,21 @@
 <?php
-require __DIR__ . '/Models/config/dbcreator.php';
+// Assuming that you have the db connection in this place
+// require __DIR__ . '/Models/config/dbcreator.php';
+// And the layout in another file
 include __DIR__ . '/View/includes/header.php';
-?> 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Interface</title>
+  <title>Create Account</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="./View/assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<!-- Try includding taildwing.css  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -33,63 +32,91 @@ module.exports = {
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
-
+<body>
     <div class="w-full max-w-md mx-auto">
         <div class="bg-[#F2F0E9] rounded-xl shadow-md p-8 border border-gray-200 max-w-xl">
             <!-- Header -->
             <div class="text-center mb-8">
                 <div class="w-16 h-16 bg-[#CDC1FF] rounded-full inline-flex items-center justify-center mb-4">
-                    <i class="fas fa-user-circle text-7xl" ></i>
+                  <i class="fas fa-user-plus text-7xl"></i>
                 </div>
-                <h1 class="text-gray-800 text-xl mb-2">Welcome Back</h1>
-                <p class="text-gray-600 text-sm">Sign in to continue your journey</p>
+                <h1 class="text-gray-800 text-xl mb-2">Create Account</h1>
+                <p class="text-gray-600 text-sm">Start your journey with us.</p>
             </div>
 
             <!-- Form -->
-            <form action="/ProductManager-PHP/Controllers/auth/login.php">
+            <form>
+              <!-- Username Field -->
+                <div class="relative mb-6">
+                    <input
+                        type="text"
+                        id="username"
+                         class="form-control"
+                       placeholder=" "
+                        required
+                        autocomplete="username"
+                    >
+                     <label for="username" class="floating-label">Username</label>
+                </div>
                 <!-- Email Field -->
                 <div class="relative mb-6">
-                    <input 
-                        type="email" 
-                        id="email" 
-                        class="form-control" 
-                        placeholder=" "
-                        required
-                        autocomplete="email"
-                    >
-                    <label for="email" class="floating-label">Email address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder=" "
+                    required
+                      autocomplete="email"
+                  >
+                  <label for="email" class="floating-label">Email address</label>
                 </div>
+
 
                 <!-- Password Field -->
                 <div class="relative mb-6">
-                    <input 
-                        type="password" 
-                        id="password" 
-                        class="form-control" 
+                    <input
+                      type="password"
+                        id="password"
+                        class="form-control"
                         placeholder=" "
                         required
-                        autocomplete="current-password"
+                        autocomplete="new-password"
                     >
                     <label for="password" class="floating-label">Password</label>
-                    <button 
+                    <button
                         type="button"
                         id="password-toggle"
                         class="password-toggle"
                         aria-label="Toggle password visibility"
-                    >
+                     >
                         <i class="fas fa-eye" id="toggleIcon"></i>
                     </button>
                 </div>
-
-                <!-- Options -->
-                <div class="flex justify-center items-center mb-6 text-sm">
-                    <div class="">
-                      <a href="#" class="text-[#A294F9] no-underline transition-colors duration-200 hover:text-[#8C7DF9]">Forgot password?</a>
-                    </div>
+              <!-- Confirm Password Field -->
+                <div class="relative mb-6">
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                         class="form-control"
+                        placeholder=" "
+                        required
+                        autocomplete="new-password"
+                    >
+                    <label for="confirmPassword" class="floating-label">Confirm Password</label>
+                     <button
+                        type="button"
+                        id="confirm-password-toggle"
+                        class="password-toggle"
+                        aria-label="Toggle password visibility"
+                    >
+                        <i class="fas fa-eye" id="toggleConfirmIcon"></i>
+                    </button>
                 </div>
 
+
+
                 <!-- Submit Button -->
-                <button type="submit" class="
+                  <button type="submit" class="
     w-full 
     py-3 
     relative
@@ -124,27 +151,23 @@ module.exports = {
     hover:before:scale-x-100
     aria-disabled:true
 ">
-    <span class="relative z-10">Login</span>
+    <span class="relative z-10">Create Account</span>
      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 relative z-10" viewBox="0 0 20 20" fill="currentColor">
       <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>
 </button>
             </form>
 
-            <!-- Sign Up Link -->
+            <!-- Log In Link -->
             <div class="text-center mt-6 text-sm text-gray-600">
                 <p>
-                    Don't have an account?
-                    <a href="./register.php" class="text-[#A294F9] no-underline font-medium transition-colors duration-200 hover:text-[#8C7DF9]">Create one now</a>
+                    Already have an account?
+                    <a href="index.php" class="text-[#A294F9] no-underline font-medium transition-colors duration-200 hover:text-[#8C7DF9]">Login here</a>
                 </p>
             </div>
         </div>
     </div>
-</html>
-
- <!-- require __DIR__ . '/View/includes/footer.php';  -->
-
-
-<script src="View/assets/JS/script.js"></script>
 </body>
+<script src="View/assets/JS/script.js"></script>
 </html>
+  <!-- require __DIR__ . '/View/includes/footer.php';  -->
