@@ -96,8 +96,8 @@ module.exports = {
                 <div class="relative mb-6">
                     <input
                         type="password"
-                        id="confirmPassword"
-                         class="form-control"
+                        id="password_02"
+                        class="form-control"
                         placeholder=" "
                         required
                         autocomplete="new-password"
