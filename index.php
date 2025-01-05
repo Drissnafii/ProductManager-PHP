@@ -82,9 +82,8 @@ module.exports = {
                 </div>
 
                 <!-- Options -->
-                <div class="flex justify-between items-center mb-6 text-sm">
-                    <div class="text-center">
-
+                <div class="flex justify-center items-center mb-6 text-sm">
+                    <div class="">
                       <a href="#" class="text-[#A294F9] no-underline transition-colors duration-200 hover:text-[#8C7DF9]">Forgot password?</a>
                     </div>
                 </div>
