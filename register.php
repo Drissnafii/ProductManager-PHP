@@ -14,22 +14,7 @@ include __DIR__ . '/View/includes/header.php';
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-module.exports = {
-  content: ["./src/**/*.{html,js}"],
-  theme: {
-    extend: {
-       fontFamily:{
-        'outfit' : ['Outfit', 'sans-serif'],
-          'poppins': ['Poppins', 'sans-serif'],
-        }
-    },
-  },
-  plugins: [],
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -143,7 +128,7 @@ module.exports = {
     before:absolute
     before:inset-0
     before:bg-[#8C7DF9]
-    before:transition-transform 
+    before:transition-transform
     before:duration-500
     before:transform 
     before:scale-x-0 
@@ -153,7 +138,7 @@ module.exports = {
 ">
     <span class="relative z-10">Create Account</span>
      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 relative z-10" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+       <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>
 </button>
             </form>
@@ -167,6 +152,23 @@ module.exports = {
             </div>
         </div>
     </div>
+
+    
+       <script src="https://cdn.tailwindcss.com"></script>
+       <script>
+       module.exports = {
+         content: ["./src/**/*.{html,js}"],
+         theme: {
+           extend: {
+              fontFamily:{
+               'outfit' : ['Outfit', 'sans-serif'],
+                 'poppins': ['Poppins', 'sans-serif'],
+               }
+           },
+         },
+         plugins: [],
+       }
+       </script>
 </body>
 <script src="View/assets/JS/script.js"></script>
 </html>
