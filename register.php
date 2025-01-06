@@ -34,10 +34,11 @@ include __DIR__ . '/View/includes/header.php';
               <!-- Username Field -->
                 <div class="relative mb-6">
                     <input
+                    name="username"
                         type="text"
                         id="username"
-                         class="form-control"
-                       placeholder=" "
+                        class="form-control"
+                        placeholder=" "
                         required
                         autocomplete="username"
                     >
@@ -46,12 +47,13 @@ include __DIR__ . '/View/includes/header.php';
                 <!-- Email Field -->
                 <div class="relative mb-6">
                   <input
+                  name="email"
                     type="email"
                     id="email"
                     class="form-control"
                     placeholder=" "
                     required
-                      autocomplete="email"
+                    autocomplete="email"
                   >
                   <label for="email" class="floating-label">Email address</label>
                 </div>
@@ -60,6 +62,7 @@ include __DIR__ . '/View/includes/header.php';
                 <!-- Password Field -->
                 <div class="relative mb-6">
                     <input
+                    name="password"
                       type="password"
                         id="password"
                         class="form-control"
