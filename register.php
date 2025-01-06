@@ -30,7 +30,7 @@ include __DIR__ . '/View/includes/header.php';
             </div>
 
             <!-- Form -->
-            <form>
+            <form action="./Controllers/auth/creatAcc.php">
               <!-- Username Field -->
                 <div class="relative mb-6">
                     <input
@@ -153,7 +153,7 @@ include __DIR__ . '/View/includes/header.php';
         </div>
     </div>
 
-    
+
        <script src="https://cdn.tailwindcss.com"></script>
        <script>
        module.exports = {
