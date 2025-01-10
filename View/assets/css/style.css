@@ -80,3 +80,16 @@ h1, h2, h3, h4, h5, h6, input, label, button {
 .password-toggle:hover {
     color: #A294F9;
 }
+
+ /* Drop down MENU  */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.dropdown-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
